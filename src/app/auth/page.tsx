@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import './style.css'
 import clsx from 'clsx';
-import signUp from '../firebase/auth/signup';
 import Link from 'next/link';
 
 export default function Page() {
@@ -21,22 +20,7 @@ export default function Page() {
     e.preventDefault()
 
     if (toggle) {
-      const { result, error } = await signIn(email, password);
-      if (error) {
-        return console.log(error)
-      }
 
-      // else successful
-      console.log(result)
-
-    } else {
-      const { result, error } = await signUp(email, password);
-      if (error) {
-        return console.log(error)
-      }
-
-      // else successful
-      console.log(result)
     }
   }
 
