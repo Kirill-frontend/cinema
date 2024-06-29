@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,16 +19,126 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000ef;
+}
+
+.loader div {
+  background-color: transparent;
+}
+
+.bg-black-half {
+  background-color: #0E0E0E;
+}
+
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-black-16 {
+  background-color: #161616;
+}
+
+.bg-blue-block {
+  background-color: #175273;
+}
+
+.bg-blue-darker {
+  background-color: #0D3044;
+}
+
+.splide_custom_arrow {
+  background-color: transparent !important;
+  width: 3em !important;
+}
+
+.splide_custom_arrow svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.splide_custom_arrow svg path {
+  fill: white;
+}
+
+.selection {
+  position: relative;
+}
+
+.selection .film_card_img {
+  position: relative;
+}
+
+.selection .film_card_img::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #0000003a;
+  display: block;
+}
+
+.selection .film_card_title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes ldio-x2uulkbinbj {
+  0% {
+    background: #ff4c4c
+  }
+
+  12.5% {
+    background: #ff4c4c
+  }
+
+  12.625% {
+    background: #0099e5
+  }
+
+  100% {
+    background: #0099e5
+  }
+}
+
+.ldio-x2uulkbinbj div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #0099e5;
+  animation: ldio-x2uulkbinbj 1s linear infinite;
+}
+
+.loadingio-spinner-blocks-nq4q5u6dq7r {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.ldio-x2uulkbinbj {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  /* see note above */
 }
