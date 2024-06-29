@@ -9,6 +9,15 @@ import FilmCard from "./components/film-card";
 export default function Home() {
   let freakData = []
 
+  const splideOptions: any = {
+    perPage: 5, pagination: false, classes: {
+      arrows: 'splide__arrows splide_custom_arrows',
+      arrow: 'splide__arrow splide_custom_arrow',
+      prev: 'splide__arrow--prev splide_custom_arrow_prev',
+      next: 'splide__arrow--next splide_custom_arrow_next',
+    }
+  }
+
   freakData = Array.from({ length: 10 }, (v, k) => k)
 
 
@@ -18,14 +27,7 @@ export default function Home() {
       <TitleBlock title="Новинки світового прокату" />
       <BlueBlock>
         <div className="slider_container container mx-auto">
-          <Splide aria-label="My Favorite Images" options={{
-            perPage: 5, pagination: false, classes: {
-              arrows: 'splide__arrows splide_custom_arrows',
-              arrow: 'splide__arrow splide_custom_arrow',
-              prev: 'splide__arrow--prev splide_custom_arrow_prev',
-              next: 'splide__arrow--next splide_custom_arrow_next',
-            },
-          }}>
+          <Splide aria-label="My Favorite Images" options={splideOptions}>
             <SplideSlide>
               <FilmCard name={"some name"} src={"https://st2.depositphotos.com/1105977/9877/i/450/depositphotos_98775856-stock-photo-retro-film-production-accessories-still.jpg"} ></FilmCard>
             </SplideSlide>
